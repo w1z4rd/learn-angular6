@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Observable } from 'rxjs/Observable';
-import 'rxjs/operators/catchError';
-import 'rxjs/operators/map';
-import 'rxjs/operators/tap';
+import { catchError } from 'rxjs/operators/catchError';
+import { map } from 'rxjs/operators/map';
+import { tap } from 'rxjs/operators/tap';
 
 import { Hero } from './hero';
 import { MessageService } from './message.service';

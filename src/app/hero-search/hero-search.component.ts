@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 
 import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
-import 'rxjs/operators/debounceTime';
-import 'rxjs/operators/switchMap';
-import 'rxjs/operators/distinctUntilChanged';
+import { debounceTime } from 'rxjs/operators/debounceTime';
+import { switchMap } from 'rxjs/operators/switchMap';
+import { distinctUntilChanged } from 'rxjs/operators/distinctUntilChanged';
 
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
@@ -33,3 +33,4 @@ export class HeroSearchComponent implements OnInit {
   }
 
 }
+
