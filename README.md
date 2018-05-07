@@ -1,3 +1,4 @@
+[![Build status](https://travis-ci.org/w1z4rd/learn-angular6.svg?branch=master)](https://travis-ci.org/w1z4rd/learn-angular6)
 [![Known Vulnerabilities](https://snyk.io/test/github/w1z4rd/learn-angular6/badge.svg?targetFile=package.json)](https://snyk.io/test/github/w1z4rd/learn-angular6?targetFile=package.json)
 
 # Todos
