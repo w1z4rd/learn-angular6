@@ -15,7 +15,7 @@ addons:
   chrome: stable
 
 before_script:
-  - npm install angular-cli
+  - npm install @angular/cli
   - npm install
 
 script:
