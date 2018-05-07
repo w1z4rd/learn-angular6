@@ -1,3 +1,5 @@
+[![Known Vulnerabilities](https://snyk.io/test/github/w1z4rd/learn-angular6/badge.svg?targetFile=package.json)](https://snyk.io/test/github/w1z4rd/learn-angular6?targetFile=package.json)
+
 # Todos
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.

@@ -35,7 +35,7 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
       InMemoryDataService, { dataEncapsulation: false })
   ],
   providers: [
-    HeroService, 
+    HeroService,
     MessageService
   ],
   bootstrap: [AppComponent]

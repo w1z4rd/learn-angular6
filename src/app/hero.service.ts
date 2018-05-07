@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { Observable } from 'rxjs';
-import { catchError, map, tap } from 'rxjs/operators';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/operators/catchError';
+import 'rxjs/operators/map';
+import 'rxjs/operators/tap';
 
 import { Hero } from './hero';
 import { MessageService } from './message.service';
@@ -37,7 +39,7 @@ export class HeroService {
   updateHero(hero: Hero): Observable<any> {
     return this.http.put(this.heroesUrl, hero, this.httpOptions)
     .pipe(
-      tap(_=> this.log(`updated hero id=${hero.id}`)),
+      tap(_ => this.log(`updated hero id=${hero.id}`)),
       catchError(this.handleError<any>(`updateHero`))
     );
   }
@@ -45,13 +47,13 @@ export class HeroService {
   addHero(hero: Hero): Observable<any> {
     return this.http.post<Hero>(this.heroesUrl, hero, this.httpOptions)
     .pipe(
-      tap((hero: Hero) => this.log(`added hero id=${hero.id}`)),
+      tap((h: Hero) => this.log(`added hero id=${h.id}`)),
       catchError(this.handleError<Hero>('addHero'))
     );
   }
 
   deleteHero(hero: Hero | number): Observable<any> {
-    const id = typeof hero === 'number' ? hero : hero:.id;
+    const id = typeof hero === 'number' ? hero : hero.id;
     const url = `${this.heroesUrl}/${id}`;
 
     return this.http.delete<Hero>(url, this.httpOptions)
@@ -62,7 +64,7 @@ export class HeroService {
   }
 
   searchHeroes(term: string): Observable<Hero[]> {
-    if(!term.trim()) {
+    if (!term.trim()) {
       return Observable.create(function (observer) {
         observer.next([]);
       });
@@ -87,7 +89,7 @@ export class HeroService {
       return Observable.create(function (observer) {
         observer.next(result as T);
       });
-    }
+    };
   }
 }
 
