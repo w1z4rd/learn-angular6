@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { mock } from 'ts-mockito';
 
 import { HeroSearchComponent } from './hero-search.component';
+import { HeroService } from '../hero.service';
 
 describe('HeroSearchComponent', () => {
   let component: HeroSearchComponent;
@@ -8,7 +10,8 @@ describe('HeroSearchComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HeroSearchComponent ]
+      declarations: [ HeroSearchComponent ],
+      providers: [ { provider: HeroService, useFactory: () => mock(HeroService) } ]
     })
     .compileComponents();
   }));
