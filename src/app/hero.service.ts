@@ -28,8 +28,7 @@ export class HeroService {
 
   getHero(id: number): Observable<Hero> {
     const url = `${this.heroesUrl}/${id}`;
-    return this.http
-    .get<Hero>(url)
+    return this.http.get<Hero>(url)
     .pipe(
       tap(hero => this.log(`fetched hero: id=${hero.id}`)),
       catchError(this.handleError('getHero', null))
@@ -37,7 +36,7 @@ export class HeroService {
   }
 
   updateHero(hero: Hero): Observable<any> {
-    return this.http.put(this.heroesUrl, hero, this.httpOptions)
+    return this.http.put<Hero>(this.heroesUrl, hero, this.httpOptions)
     .pipe(
       tap(_ => this.log(`updated hero id=${hero.id}`)),
       catchError(this.handleError<any>(`updateHero`))
