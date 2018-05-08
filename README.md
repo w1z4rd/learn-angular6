@@ -1,6 +1,7 @@
 [![Build status](https://travis-ci.org/w1z4rd/learn-angular6.svg?branch=master)](https://travis-ci.org/w1z4rd/learn-angular6)
 [![Known Vulnerabilities](https://snyk.io/test/github/w1z4rd/learn-angular6/badge.svg?targetFile=package.json)](https://snyk.io/test/github/w1z4rd/learn-angular6?targetFile=package.json)
 [![Coverage Status](https://coveralls.io/repos/github/w1z4rd/learn-angular6/badge.svg?branch=master)](https://coveralls.io/github/w1z4rd/learn-angular6?branch=master)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/4af391c284384fe4bfc6364f01380f96)](https://www.codacy.com/app/w1z4rd/learn-angular6?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=w1z4rd/learn-angular6&amp;utm_campaign=Badge_Grade)
 
 # Todos
 
