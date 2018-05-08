@@ -10,7 +10,9 @@
     "test:cover": "rm -rf ./coverage && ng test --no-watch --code-coverage",
     "test:watch": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "codacy": "cat ./coverage/lcov.info | ./node_modules/codacy/bin/codacy.js"
   },
   "private": true,
   "dependencies": {
