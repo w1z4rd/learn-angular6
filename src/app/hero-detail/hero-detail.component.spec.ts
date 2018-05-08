@@ -2,11 +2,12 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { Location } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Observable, ReplaySubject } from 'rxjs';
+import { Observable, ReplaySubject } from 'rxjs/Observable';
+import { ReplaySubject } from 'rxjs/ReplaySubject';
 import { of } from 'rxjs/observable/of';
-import { 
+import {
   anyNumber,
-  anyString, 
+  anyString,
   instance,
   mock,
   verify,
@@ -21,10 +22,10 @@ import { HEROES } from '../testing/stubs/heroes.const';
 describe('HeroDetailComponent', () => {
   let component: HeroDetailComponent;
   let fixture: ComponentFixture<HeroDetailComponent>;
-  let location: Location = mock(Location);
-  let heroService: HeroService = mock(HeroService);
-  let observableHero: Observable<Hero> = of(HEROES[1]);
-  let observableAny: Observable<any> = of({});
+  const location: Location = mock(Location);
+  const heroService: HeroService = mock(HeroService);
+  const observableHero: Observable<Hero> = of(HEROES[1]);
+  const observableAny: Observable<any> = of({});
 
   beforeEach(async(() => {
     when(heroService.getHero(anyNumber())).thenReturn(observableHero);
@@ -35,7 +36,7 @@ describe('HeroDetailComponent', () => {
         RouterTestingModule
       ],
       declarations: [ HeroDetailComponent ],
-      providers: [ 
+      providers: [
         { provide: HeroService, useValue: instance(heroService) },
         { provide: Location, useValue: instance(location) }
       ]

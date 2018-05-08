@@ -10,10 +10,10 @@ import { Hero } from './hero';
 import { HEROES } from './testing/stubs/heroes.const';
 
 describe('HeroService', () => {
-  let heroesUrl: string = 'api/heroes';
-  let httpClient: HttpClient = mock(HttpClient);
-  let messageService: MessageService = mock(MessageService);
-  let hero = { id: 11, name: 'Hero' } as Hero;
+  const heroesUrl = 'api/heroes';
+  const httpClient: HttpClient = mock(HttpClient);
+  const messageService: MessageService = mock(MessageService);
+  const hero = { id: 11, name: 'Hero' } as Hero;
 
   beforeEach(() => {
     when(httpClient.get<Hero[]>(heroesUrl)).thenReturn(of(HEROES));
@@ -36,14 +36,14 @@ describe('HeroService', () => {
   }));
 
   it('should getHeroes', inject([HeroService], (service: HeroService) => {
-    let actual: Hero[]; 
+    let actual: Hero[];
     service.getHeroes().subscribe(heroes => actual = heroes);
     expect(actual).toEqual(HEROES);
   }));
 
   it('should getHero by id', inject([HeroService], (service: HeroService) => {
     let actual: Hero;
-    service.getHero(1).subscribe(hero => actual = hero);
+    service.getHero(1).subscribe(h => actual = h);
     expect(actual).toEqual(HEROES[1]);
   }));
 

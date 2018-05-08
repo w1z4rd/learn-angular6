@@ -16,13 +16,13 @@ import { HEROES } from '../testing/stubs/heroes.const';
 describe('HeroSearchComponent', () => {
   let component: HeroSearchComponent;
   let fixture: ComponentFixture<HeroSearchComponent>;
-  let heroService: HeroService = mock(HeroService);
+  const heroService: HeroService = mock(HeroService);
 
   beforeEach(async(() => {
     when(heroService.searchHeroes(anyString())).thenReturn(of(HEROES));
     TestBed.configureTestingModule({
       imports: [
-        FormsModule, 
+        FormsModule,
         RouterTestingModule
       ],
       declarations: [ HeroSearchComponent ],

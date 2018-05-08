@@ -11,9 +11,9 @@ import { HEROES } from '../testing/stubs/heroes.const';
 describe('HeroesComponent', () => {
   let component: HeroesComponent;
   let fixture: ComponentFixture<HeroesComponent>;
-  let heroService: HeroService = mock(HeroService);
-  let name: string = 'Hero';
-  let hero: Hero = { id: 99, name: 'Hero' } as Hero;
+  const heroService: HeroService = mock(HeroService);
+  const name = 'Hero';
+  const hero: Hero = { id: 99, name: 'Hero' } as Hero;
 
   beforeEach(async(() => {
     when(heroService.getHeroes()).thenReturn(of(HEROES));
@@ -58,10 +58,10 @@ describe('HeroesComponent', () => {
 
   it('should delete hero', () => {
     component.heroes.push(hero);
-    
+
     component.delete(hero);
 
-    expect(component.heroes.includes(hero)).toBeFalsy()
+    expect(component.heroes.includes(hero)).toBeFalsy();
     verify(heroService.deleteHero(hero));
   });
 });
