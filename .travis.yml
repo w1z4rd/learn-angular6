@@ -15,12 +15,17 @@ addons:
   chrome: stable
 
 before_script:
-  - npm install @angular/cli
+  - npm install -g @angular/cli
+  - npm install -g karma
   - npm install
 
 script:
-  - ng build --prod
-  - ng lint
-  - ng test
-  - ng e2e
+  - npm run lint
+  - npm run test:cover
+  - npm run e2e
+  - npm run build
+
+after_success:
+  - npm run coveralls
+  - npm run codacy
 

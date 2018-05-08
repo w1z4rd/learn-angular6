@@ -1,5 +1,6 @@
 [![Build status](https://travis-ci.org/w1z4rd/learn-angular6.svg?branch=master)](https://travis-ci.org/w1z4rd/learn-angular6)
 [![Known Vulnerabilities](https://snyk.io/test/github/w1z4rd/learn-angular6/badge.svg?targetFile=package.json)](https://snyk.io/test/github/w1z4rd/learn-angular6?targetFile=package.json)
+[![Coverage Status](https://coveralls.io/repos/github/w1z4rd/learn-angular6/badge.svg?branch=master)](https://coveralls.io/github/w1z4rd/learn-angular6?branch=master)
 
 # Todos
 
@@ -28,3 +29,4 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
